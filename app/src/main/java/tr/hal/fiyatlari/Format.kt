@@ -18,7 +18,7 @@ fun priceText(i: HalItem): String {
         lo != null && hi != null && lo != hi -> "${num(lo)} – ${num(hi)} ₺/${i.unit}"
         lo != null -> "${num(lo)} ₺/${i.unit}"
         hi != null -> "${num(hi)} ₺/${i.unit}"
-        else -> "—"
+        else -> "Pazarlık"
     }
 }
 
