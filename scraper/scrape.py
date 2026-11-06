@@ -191,7 +191,7 @@ def main():
             }
             ok += 1
             print(f"[{hall['id']}] {len(items)} urun" + (" (onceki kayitla ayni!)" if stale else ""))
-        elif hall["id"] not in by_id:
+        elif by_id.get(hall["id"], {}).get("source") not in [s["url"] for s in hall["sources"]]:
             by_id[hall["id"]] = {
                 "id": hall["id"], "name": hall["name"], "source": "",
                 "note": hall.get("empty_note", "Bugün için kaynakta fiyat yok"), "items": [],
