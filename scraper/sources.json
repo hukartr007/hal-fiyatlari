@@ -1,46 +1,14 @@
 {
   "halls": [
-    {
-      "id": "kumluca",
-      "name": "Kumluca",
-      "sources": [
-        {"url": "https://www.karekod.org/blog/kumluca-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
-      ]
-    },
-    {
-      "id": "serik",
-      "name": "Serik",
-      "sources": [
-        {"url": "https://www.karekod.org/blog/serik-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
-      ]
-    },
-    {
-      "id": "demre",
-      "name": "Demre",
-      "sources": [
-        {"url": "https://www.karekod.org/blog/demre-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
-      ]
-    },
-    {
-      "id": "elmali",
-      "name": "Elmalı",
-      "sources": [
-        {"url": "https://www.karekod.org/blog/elmali-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
-      ]
-    },
-    {
-      "id": "finike",
-      "name": "Finike",
-      "sources": [
-        {"url": "https://www.karekod.org/blog/finike-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
-      ]
-    },
-    {
-      "id": "mersin",
-      "name": "Mersin",
-      "sources": [
-        {"url": "https://www.karekod.org/blog/mersin-hal-fiyatlari/", "note": "Kaynak: karekod.org (Mersin Büyükşehir bültenine dayandığı belirtiliyor, toptan min-max)"}
-      ]
-    }
+    {"id": "antalya", "name": "Antalya", "sources": [{"url": "https://www.batiakdeniztv.com/antalya-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "kumluca", "name": "Kumluca", "sources": [{"url": "https://www.batiakdeniztv.com/kumluca-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "serik", "name": "Serik", "sources": [{"url": "https://www.batiakdeniztv.com/serik-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "demre", "name": "Demre", "sources": [{"url": "https://www.batiakdeniztv.com/demre-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "elmali", "name": "Elmalı", "sources": [{"url": "https://www.batiakdeniztv.com/elmali-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "finike", "name": "Finike", "sources": [{"url": "https://www.batiakdeniztv.com/finike-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "gazipasa", "name": "Gazipaşa", "sources": [{"url": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "alanya", "name": "Alanya", "sources": [{"url": "https://www.batiakdeniztv.com/alanya-hal-fiyatlari", "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)"}]},
+    {"id": "fethiye", "name": "Muğla (Fethiye)", "sources": [{"url": "https://www.batiakdeniztv.com/mugla-fethiye-hal-fiyatlari", "parser": "rows5", "section": "FETHİYE", "note": "Kaynak: batiakdeniztv.com, Fethiye Karaçulha Toptancı Hali"}]},
+    {"id": "mersin", "name": "Mersin", "empty_note": "Mersin için güvenilir kaynak henüz yok", "sources": [{"url": "https://www.karekod.org/blog/mersin-hal-fiyatlari/", "note": "Kaynak: karekod.org (doğrulanmadı, resmi bülten değil)"}]}
   ]
 }
