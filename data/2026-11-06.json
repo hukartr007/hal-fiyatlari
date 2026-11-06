@@ -271,161 +271,9 @@
   {
    "id": "demre",
    "name": "Demre",
-   "source": "https://www.karekod.org/blog/demre-hal-fiyatlari/",
-   "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)",
-   "stale": false,
-   "items": [
-    {
-     "name": "California Sarı Biber",
-     "unit": "kg",
-     "min": 50.0,
-     "max": 50.0
-    },
-    {
-     "name": "Şili Kırmızı Biber",
-     "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
-    },
-    {
-     "name": "Kılçık Sivri Biber",
-     "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
-    },
-    {
-     "name": "California Kırmızı Biber",
-     "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
-    },
-    {
-     "name": "Yeşil Kampari",
-     "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
-    },
-    {
-     "name": "Patlıcan",
-     "unit": "kg",
-     "min": 25.0,
-     "max": 25.0
-    },
-    {
-     "name": "Kıl Sivri Biber",
-     "unit": "kg",
-     "min": 25.0,
-     "max": 25.0
-    },
-    {
-     "name": "Domates",
-     "unit": "kg",
-     "min": 12.0,
-     "max": 12.0
-    },
-    {
-     "name": "Kapya Biber",
-     "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
-    },
-    {
-     "name": "Oval Domates",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 20.0
-    },
-    {
-     "name": "Salkito Kokteyl Domates",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 20.0
-    },
-    {
-     "name": "Şili Yeşil Biber",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 20.0
-    },
-    {
-     "name": "Kabak",
-     "unit": "kg",
-     "min": 13.0,
-     "max": 13.0
-    },
-    {
-     "name": "Üçburun Köy Biberi",
-     "unit": "kg",
-     "min": 15.0,
-     "max": 15.0
-    },
-    {
-     "name": "Çarli Biber",
-     "unit": "kg",
-     "min": 10.0,
-     "max": 10.0
-    },
-    {
-     "name": "Acı Çarli Biber",
-     "unit": "kg",
-     "min": 10.0,
-     "max": 10.0
-    },
-    {
-     "name": "Macar Çarli",
-     "unit": "kg",
-     "min": 10.0,
-     "max": 10.0
-    },
-    {
-     "name": "Macar Dolma",
-     "unit": "kg",
-     "min": 10.0,
-     "max": 10.0
-    },
-    {
-     "name": "Standart Domates",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 20.0
-    },
-    {
-     "name": "Pembe Domates",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 20.0
-    },
-    {
-     "name": "Kokteyl Domates",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 20.0
-    },
-    {
-     "name": "Dolma Biber",
-     "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
-    },
-    {
-     "name": "Sivri Biber",
-     "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
-    },
-    {
-     "name": "Fasulye",
-     "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
-    },
-    {
-     "name": "Yerli Muz",
-     "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
-    }
-   ]
+   "source": "",
+   "note": "Bugün için kaynakta fiyat yok",
+   "items": []
   },
   {
    "id": "elmali",
@@ -536,7 +384,7 @@
    "id": "finike",
    "name": "Finike",
    "source": "",
-   "note": "Bugün için veri alınamadı",
+   "note": "Bugün için kaynakta fiyat yok",
    "items": []
   },
   {
