@@ -1,0 +1,11 @@
+{
+ "halls": [
+  {"id": "kumluca", "name": "Kumluca"},
+  {"id": "serik", "name": "Serik"},
+  {"id": "demre", "name": "Demre"},
+  {"id": "elmali", "name": "Elmalı"},
+  {"id": "finike", "name": "Finike"},
+  {"id": "mersin", "name": "Mersin"}
+ ],
+ "dates": []
+}

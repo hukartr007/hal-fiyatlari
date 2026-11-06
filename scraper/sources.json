@@ -1,0 +1,46 @@
+{
+  "halls": [
+    {
+      "id": "kumluca",
+      "name": "Kumluca",
+      "sources": [
+        {"url": "https://www.karekod.org/blog/kumluca-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
+      ]
+    },
+    {
+      "id": "serik",
+      "name": "Serik",
+      "sources": [
+        {"url": "https://www.karekod.org/blog/serik-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
+      ]
+    },
+    {
+      "id": "demre",
+      "name": "Demre",
+      "sources": [
+        {"url": "https://www.karekod.org/blog/demre-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
+      ]
+    },
+    {
+      "id": "elmali",
+      "name": "Elmalı",
+      "sources": [
+        {"url": "https://www.karekod.org/blog/elmali-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
+      ]
+    },
+    {
+      "id": "finike",
+      "name": "Finike",
+      "sources": [
+        {"url": "https://www.karekod.org/blog/finike-hal-fiyatlari/", "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)"}
+      ]
+    },
+    {
+      "id": "mersin",
+      "name": "Mersin",
+      "sources": [
+        {"url": "https://www.karekod.org/blog/mersin-hal-fiyatlari/", "note": "Kaynak: karekod.org (Mersin Büyükşehir bültenine dayandığı belirtiliyor, toptan min-max)"}
+      ]
+    }
+  ]
+}
