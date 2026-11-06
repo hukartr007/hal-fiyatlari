@@ -1,0 +1,1077 @@
+{
+ "date": "2026-11-06",
+ "halls": [
+  {
+   "id": "kumluca",
+   "name": "Kumluca",
+   "source": "https://www.karekod.org/blog/kumluca-hal-fiyatlari/",
+   "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)",
+   "stale": false,
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Yuvarlak Domates",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Oval Domates",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 28.0,
+     "max": 28.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Kıl Sivri Biber",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0
+    },
+    {
+     "name": "Kılçık Sivri Biber",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Üçburun Köy Biberi",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Dolma Biber",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Şili Biber Kırmızı",
+     "unit": "kg",
+     "min": 65.0,
+     "max": 65.0
+    },
+    {
+     "name": "Şili Biber Yeşil",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Jalapeno",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Yeşil Kapya",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Cin Biber",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Salatalık Silor",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 15.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 25.0
+    },
+    {
+     "name": "Patlıcan Oval",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 25.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 18.0,
+     "max": 18.0
+    },
+    {
+     "name": "Fasulye",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Standart Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    }
+   ]
+  },
+  {
+   "id": "serik",
+   "name": "Serik",
+   "source": "https://www.karekod.org/blog/serik-hal-fiyatlari/",
+   "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)",
+   "stale": false,
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 23.0
+    },
+    {
+     "name": "Kokteyl Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 40.0
+    },
+    {
+     "name": "Çeri Domates",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 90.0
+    },
+    {
+     "name": "Pembe Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 40.0
+    },
+    {
+     "name": "Salçalık Domates",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 15.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 70.0
+    },
+    {
+     "name": "Kılçık biber",
+     "unit": "kg",
+     "min": 90.0,
+     "max": 90.0
+    },
+    {
+     "name": "Dolma Biber",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 55.0
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Üçburun köy biberi",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Salatalık (yerel listede “Salata”)",
+     "unit": "kg",
+     "min": 33.0,
+     "max": 33.0
+    },
+    {
+     "name": "Silor Salatalık",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 30.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 40.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Armut (Santamariya)",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 80.0
+    },
+    {
+     "name": "Golden Elma",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 70.0
+    },
+    {
+     "name": "Granny Smith Elma",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 90.0
+    },
+    {
+     "name": "Starking Elma",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 70.0
+    },
+    {
+     "name": "Çilek",
+     "unit": "kg",
+     "min": 80.0,
+     "max": 110.0
+    },
+    {
+     "name": "Greyfurt",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 35.0
+    },
+    {
+     "name": "Karpuz",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 17.0
+    },
+    {
+     "name": "Kavun",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 28.0
+    },
+    {
+     "name": "Anjelik Erik",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Beyaz İncir",
+     "unit": "kg",
+     "min": 75.0,
+     "max": 120.0
+    },
+    {
+     "name": "Siyah İncir",
+     "unit": "kg",
+     "min": 75.0,
+     "max": 150.0
+    },
+    {
+     "name": "Nektarin",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Kayısı",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 90.0
+    },
+    {
+     "name": "Limon",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Yerli Muz",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 65.0
+    },
+    {
+     "name": "Kiraz",
+     "unit": "kg",
+     "min": 100.0,
+     "max": 200.0
+    },
+    {
+     "name": "Sıkmalık Portakal",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 30.0
+    },
+    {
+     "name": "Meyvelik Portakal",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 35.0
+    },
+    {
+     "name": "Siyah Üzüm",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Beyaz Üzüm",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Şeftali",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Altınçilek",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 95.0
+    },
+    {
+     "name": "Ahududu",
+     "unit": "kg",
+     "min": 100.0,
+     "max": 140.0
+    },
+    {
+     "name": "Böğürtlen",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 80.0
+    },
+    {
+     "name": "Ananas",
+     "unit": "adet",
+     "min": 80.0,
+     "max": 140.0
+    },
+    {
+     "name": "Avokado",
+     "unit": "adet",
+     "min": 45.0,
+     "max": 85.0
+    },
+    {
+     "name": "Blueberry",
+     "unit": "adet",
+     "min": 50.0,
+     "max": 85.0
+    },
+    {
+     "name": "Frenk Üzümü",
+     "unit": "kg",
+     "min": 100.0,
+     "max": 190.0
+    },
+    {
+     "name": "Lime Limon",
+     "unit": "kg",
+     "min": 200.0,
+     "max": 320.0
+    },
+    {
+     "name": "Hindistan Cevizi",
+     "unit": "adet",
+     "min": 60.0,
+     "max": 100.0
+    },
+    {
+     "name": "Mango",
+     "unit": "adet",
+     "min": 100.0,
+     "max": 160.0
+    },
+    {
+     "name": "İthal Muz",
+     "unit": "kg",
+     "min": 95.0,
+     "max": 137.0
+    },
+    {
+     "name": "Zencefil",
+     "unit": "kg",
+     "min": 150.0,
+     "max": 240.0
+    },
+    {
+     "name": "İthal Kivi",
+     "unit": "kg",
+     "min": 140.0,
+     "max": 230.0
+    },
+    {
+     "name": "Cin Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 80.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 70.0
+    },
+    {
+     "name": "Salçalık Kapya Biber",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 40.0
+    },
+    {
+     "name": "Üçburun Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 65.0
+    },
+    {
+     "name": "Brokoli",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Fasulye",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 80.0
+    },
+    {
+     "name": "Havuç (Beypazarı)",
+     "unit": "kg",
+     "min": 8.0,
+     "max": 13.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 23.0
+    },
+    {
+     "name": "Ispanak",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 45.0
+    },
+    {
+     "name": "Bal Kabağı",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 85.0
+    },
+    {
+     "name": "Sakız Kabağı",
+     "unit": "kg",
+     "min": 12.0,
+     "max": 20.0
+    },
+    {
+     "name": "Karnabahar",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 35.0
+    },
+    {
+     "name": "Kereviz",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 90.0
+    },
+    {
+     "name": "Patates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 35.0
+    },
+    {
+     "name": "Baby Patates",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 50.0
+    },
+    {
+     "name": "Kumpir Patates",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 40.0
+    },
+    {
+     "name": "Topak Patlıcan",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 45.0
+    },
+    {
+     "name": "Pırasa",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 60.0
+    },
+    {
+     "name": "Yerli Sarımsak",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 150.0
+    },
+    {
+     "name": "Arpacık Soğan",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 50.0
+    },
+    {
+     "name": "Yeşil Soğan",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 100.0
+    },
+    {
+     "name": "Kuru Soğan",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 35.0
+    },
+    {
+     "name": "Kırmızı Soğan",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 50.0
+    }
+   ]
+  },
+  {
+   "id": "demre",
+   "name": "Demre",
+   "source": "https://www.karekod.org/blog/demre-hal-fiyatlari/",
+   "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)",
+   "stale": false,
+   "items": [
+    {
+     "name": "California Sarı Biber",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Şili Kırmızı Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Kılçık Sivri Biber",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "California Kırmızı Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Yeşil Kampari",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 25.0
+    },
+    {
+     "name": "Kıl Sivri Biber",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 25.0
+    },
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 12.0,
+     "max": 12.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Oval Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Salkito Kokteyl Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Şili Yeşil Biber",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 13.0,
+     "max": 13.0
+    },
+    {
+     "name": "Üçburun Köy Biberi",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 15.0
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Acı Çarli Biber",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Macar Çarli",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Macar Dolma",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Standart Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Pembe Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Kokteyl Domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Dolma Biber",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Fasulye",
+     "unit": "kg",
+     "min": 60.0,
+     "max": 60.0
+    },
+    {
+     "name": "Yerli Muz",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    }
+   ]
+  },
+  {
+   "id": "elmali",
+   "name": "Elmalı",
+   "source": "https://www.karekod.org/blog/elmali-hal-fiyatlari/",
+   "note": "Kaynak: karekod.org (referans fiyat, resmi bülten değil)",
+   "stale": false,
+   "items": [
+    {
+     "name": "Standart domates",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0
+    },
+    {
+     "name": "Oval kokteyli",
+     "unit": "kg",
+     "min": 90.0,
+     "max": 90.0
+    },
+    {
+     "name": "Oval domates (farklı ürün tanımı)",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Çarli biber",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0
+    },
+    {
+     "name": "Dolma biber",
+     "unit": "kg",
+     "min": 60.0,
+     "max": 60.0
+    },
+    {
+     "name": "Kapya biber",
+     "unit": "kg",
+     "min": 73.0,
+     "max": 73.0
+    },
+    {
+     "name": "Kılçık sivri biber",
+     "unit": "kg",
+     "min": 100.0,
+     "max": 100.0
+    },
+    {
+     "name": "Kıl sivri biber",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0
+    },
+    {
+     "name": "Sivri biber",
+     "unit": "kg",
+     "min": 80.0,
+     "max": 80.0
+    },
+    {
+     "name": "Şili biber (kırmızı)",
+     "unit": "kg",
+     "min": 120.0,
+     "max": 120.0
+    },
+    {
+     "name": "Şili biber (yeşil)",
+     "unit": "kg",
+     "min": 75.0,
+     "max": 75.0
+    },
+    {
+     "name": "Üçburun (köy) biberi",
+     "unit": "kg",
+     "min": 60.0,
+     "max": 60.0
+    }
+   ]
+  },
+  {
+   "id": "finike",
+   "name": "Finike",
+   "source": "",
+   "note": "Bugün için veri alınamadı",
+   "items": []
+  },
+  {
+   "id": "mersin",
+   "name": "Mersin",
+   "source": "https://www.karekod.org/blog/mersin-hal-fiyatlari/",
+   "note": "Kaynak: karekod.org (Mersin Büyükşehir bültenine dayandığı belirtiliyor, toptan min-max)",
+   "stale": false,
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 5.5,
+     "max": 100.0
+    },
+    {
+     "name": "Salçalık domates",
+     "unit": "kg",
+     "min": 2.0,
+     "max": 25.0
+    },
+    {
+     "name": "Salkım domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 35.0
+    },
+    {
+     "name": "Pembe domates",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Kokteyl domates",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 105.0
+    },
+    {
+     "name": "Sivri biber",
+     "unit": "kg",
+     "min": 8.0,
+     "max": 185.0
+    },
+    {
+     "name": "Çarliston biber",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 85.0
+    },
+    {
+     "name": "Dolmalık biber",
+     "unit": "kg",
+     "min": 9.0,
+     "max": 90.0
+    },
+    {
+     "name": "Salçalık kapya biber",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 85.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 50.0
+    },
+    {
+     "name": "Silor salatalık",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 60.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 4.0,
+     "max": 40.0
+    },
+    {
+     "name": "Patates",
+     "unit": "kg",
+     "min": 6.1,
+     "max": 51.0
+    },
+    {
+     "name": "Kuru soğan",
+     "unit": "kg",
+     "min": 4.0,
+     "max": 40.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 50.0
+    },
+    {
+     "name": "Taze fasulye",
+     "unit": "kg",
+     "min": 8.0,
+     "max": 50.0
+    },
+    {
+     "name": "Karnabahar",
+     "unit": "kg",
+     "min": 4.0,
+     "max": 40.0
+    },
+    {
+     "name": "Ispanak",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 70.0
+    },
+    {
+     "name": "Beyaz lahana",
+     "unit": "kg",
+     "min": 2.0,
+     "max": 25.0
+    },
+    {
+     "name": "Kuru sarımsak",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 120.0
+    },
+    {
+     "name": "Mantar",
+     "unit": "kg",
+     "min": 120.0,
+     "max": 239.76
+    },
+    {
+     "name": "Maydanoz",
+     "unit": "bağ",
+     "min": 4.0,
+     "max": 15.0
+    },
+    {
+     "name": "Iceberg marul",
+     "unit": "adet",
+     "min": 5.0,
+     "max": 40.0
+    },
+    {
+     "name": "Limon (genel kayıt)",
+     "unit": "kg",
+     "min": 3.0,
+     "max": 178.0
+    },
+    {
+     "name": "Meyer limon",
+     "unit": "kg",
+     "min": 3.0,
+     "max": 24.0
+    },
+    {
+     "name": "Lemas limon",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Mandalina",
+     "unit": "kg",
+     "min": 2.5,
+     "max": 30.0
+    },
+    {
+     "name": "Satsuma mandalina",
+     "unit": "kg",
+     "min": 12.0,
+     "max": 12.0
+    },
+    {
+     "name": "Portakal",
+     "unit": "kg",
+     "min": 9.0,
+     "max": 35.0
+    },
+    {
+     "name": "Yerli Anamur muzu",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 80.0
+    },
+    {
+     "name": "Elma",
+     "unit": "kg",
+     "min": 7.0,
+     "max": 80.0
+    },
+    {
+     "name": "Golden elma",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 51.0
+    },
+    {
+     "name": "Armut",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 60.0
+    },
+    {
+     "name": "Nar",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 50.0
+    },
+    {
+     "name": "Ayva",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 65.0
+    },
+    {
+     "name": "Beyaz üzüm",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 55.0
+    },
+    {
+     "name": "Çekirdeksiz üzüm",
+     "unit": "kg",
+     "min": 14.0,
+     "max": 40.0
+    },
+    {
+     "name": "Karpuz",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 20.0
+    },
+    {
+     "name": "Kavun",
+     "unit": "kg",
+     "min": 3.0,
+     "max": 35.0
+    },
+    {
+     "name": "Greyfurt",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 30.05
+    }
+   ]
+  }
+ ]
+}
