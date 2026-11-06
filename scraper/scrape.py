@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Hal fiyatlarını sources.json'daki adreslerden çekip data/ klasörüne tarihli JSON olarak yazar.
+"""Hal fiyatlarini sources.json'daki adreslerden cekip data/ klasorune tarihli JSON olarak yazar.
 
-Her kaynak sayfadaki HTML tablolarını okur. Sütunlar başlık satırından tanınır
-(ürün / en düşük / en yüksek / fiyat / birim); tanınmazsa ilk sayısal sütun(lar) kullanılır.
-"Pazarlık" gibi sayısal olmayan fiyatlar atlanır.
+Iki sayfa bicimi desteklenir:
+  parser "list"  : satir = [urun, fiyat]; fiyat hucresinde bir veya iki fiyat olabilir
+                   ("40,00 50,00", "35.00₺ 45,00₺"). Iki fiyat = en dusuk / en yuksek.
+                   "Pazarlik" yazan satirlar fiyatsiz tutulur, "Aciklanmadi" olanlar atlanir.
+  parser "rows5" : satir = [urun, birim, en dusuk, en yuksek, "TL."]; "section" ile verilen
+                   hal basligi altindaki satirlar okunur (Mugla-Fethiye sayfasi).
 """
 import datetime
 import json
@@ -18,12 +21,10 @@ from bs4 import BeautifulSoup
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 CONFIG = ROOT / "scraper" / "sources.json"
-UA = "HalFiyatlariApp/1.0 (kisisel kullanim; gunde bir istek)"
+UA = "HalFiyatlariApp/1.0 (kisisel kullanim; gunde birkac istek)"
 
-NUM = re.compile(r"\d+(?:[.,]\d+)*")
 DATE = re.compile(r"\d{1,2}[./-]\d{1,2}[./-]\d{2,4}")
 UNIT_CELL = re.compile(r"^(kg|adet|bağ|demet|koli|kasa)$", re.I)
-UNIT_HEADER = re.compile(r"(?:₺|tl)\s*/\s*(kg|adet|bağ|demet|koli|kasa)", re.I)
 LETTER = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşü]")
 
 
@@ -37,98 +38,109 @@ def to_float(s):
         return None
 
 
-def cell_value(text):
-    """Hücredeki ilk makul fiyatı döndürür; tarih, yüzde, 'Pazarlık' vb. için None."""
-    t = text.strip()
-    if not t or "pazarlık" in t.lower() or "%" in t or DATE.search(t):
-        return None
-    m = NUM.search(t)
-    if not m:
-        return None
-    v = to_float(m.group(0))
-    if v is None or not (0 < v < 5000):
-        return None
-    return v
+def numbers(text):
+    """Metindeki makul fiyatlari sirayla dondurur."""
+    out = []
+    for tok in re.findall(r"\d[\d.,]*", text):
+        v = to_float(tok.rstrip(".,"))
+        if v is not None and 0 < v < 5000:
+            out.append(v)
+    return out
 
 
-def col_map(header):
-    m = {}
-    for i, h in enumerate(header):
-        h = h.lower()
-        if "önceki" in h or "değişim" in h or "fark" in h:
-            continue
-        if "ürün" in h or "cins" in h:
-            m.setdefault("name", i)
-        elif "birim" in h:
-            m["unit"] = i
-        elif "düşük" in h or "min" in h:
-            m["min"] = i
-        elif "yüksek" in h or "max" in h:
-            m["max"] = i
-        elif "fiyat" in h or "₺" in h:
-            m.setdefault("price", i)
-    return m
+def tr_title(s):
+    """BUYUK HARFLE yazilmis Turkce adlari 'Baslik Bicimi'ne cevirir; diger adlara dokunmaz."""
+    s = s.strip().rstrip(".")
+    if not s.isupper():
+        return s
+    s = s.replace("I", "ı").replace("İ", "i").lower()
+    out = []
+    for w in s.split():
+        first = {"i": "İ", "ı": "I"}.get(w[0], w[0].upper())
+        out.append(first + w[1:])
+    return " ".join(out)
+
+
+def add_item(items, name, unit, lo, hi):
+    key = name.lower()
+    new = {"name": name, "unit": unit, "min": lo, "max": hi}
+    old = items.get(key)
+    if old is None:
+        items[key] = new
+        return
+    width = lambda i: (i["max"] - i["min"]) if i["min"] is not None and i["max"] is not None else -1  # noqa: E731
+    if width(new) > width(old):
+        items[key] = new
 
 
 def parse_html(html):
+    """parser 'list'"""
     soup = BeautifulSoup(html, "lxml")
     items = {}
-    for table in soup.find_all("table"):
-        rows = table.find_all("tr")
-        if not rows:
+    for tr in soup.find_all("tr"):
+        cells = [c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])]
+        if len(cells) < 2:
             continue
-        first = [c.get_text(" ", strip=True) for c in rows[0].find_all(["td", "th"])]
-        joined = " ".join(first).lower()
-        has_header = "ürün" in joined or "fiyat" in joined or "cins" in joined
-        cmap = col_map(first) if has_header else {}
-        hm = UNIT_HEADER.search(joined)
-        default_unit = hm.group(1).lower() if hm else "kg"
-        for tr in rows[1 if has_header else 0:]:
-            cells = [c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])]
-            if len(cells) < 2:
-                continue
-            name = cells[cmap.get("name", 0)] if cmap.get("name", 0) < len(cells) else ""
-            name = name.strip()
-            if not name or not LETTER.search(name) or DATE.search(name):
-                continue
-
-            def at(key):
-                i = cmap.get(key)
-                return cell_value(cells[i]) if i is not None and i < len(cells) else None
-
-            lo, hi = at("min"), at("max")
-            if lo is None and hi is None:
-                p = at("price")
-                if p is not None:
-                    lo = hi = p
-            if lo is None and hi is None and not cmap:
-                vals = [cell_value(c) for i, c in enumerate(cells) if i != 0]
-                vals = [v for v in vals if v is not None][:2]
-                if vals:
-                    lo, hi = min(vals), max(vals)
-            if lo is None and hi is None:
-                continue
-            if lo is not None and hi is not None and lo > hi:
-                lo, hi = hi, lo
-
-            unit = default_unit
-            ui = cmap.get("unit")
-            if ui is not None and ui < len(cells) and UNIT_CELL.match(cells[ui].strip()):
-                unit = cells[ui].strip().lower()
+        name = cells[0]
+        low = name.lower()
+        if (not LETTER.search(name) or low.startswith("ürün") or "nöbetçi" in low
+                or "eczane" in low or DATE.search(name)):
+            continue
+        unit = "kg"
+        rest = []
+        for c in cells[1:]:
+            if UNIT_CELL.match(c.strip()):
+                unit = c.strip().lower()
             else:
-                for c in cells[1:]:
-                    if UNIT_CELL.match(c.strip()):
-                        unit = c.strip().lower()
-                        break
-            items[name.lower()] = {"name": name, "unit": unit, "min": lo, "max": hi}
+                rest.append(c)
+        price_text = " ".join(rest)
+        nums = numbers(price_text)[:2]
+        if nums:
+            add_item(items, tr_title(name), unit, min(nums), max(nums))
+        elif "pazarlık" in price_text.lower():
+            add_item(items, tr_title(name), unit, None, None)
+    return list(items.values())
+
+
+def parse_rows5(html, section):
+    """parser 'rows5': [urun, birim, en dusuk, en yuksek, TL.]; yalnizca 'section' hali okunur."""
+    soup = BeautifulSoup(html, "lxml")
+    items = {}
+    active = False
+    for tr in soup.find_all("tr"):
+        cells = [c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])]
+        if len(cells) == 1 and cells[0]:
+            head = cells[0]
+            if "TOPTANCI HAL" in head:
+                active = section in head
+            continue
+        if not active or len(cells) < 4:
+            continue
+        name, unit = cells[0], cells[1].lower()
+        if not LETTER.search(name) or not UNIT_CELL.match(unit):
+            continue
+        lo = numbers(cells[2])
+        hi = numbers(cells[3])
+        lo = lo[0] if lo else None
+        hi = hi[0] if hi else None
+        if lo is None and hi is None:
+            continue
+        if lo is None:
+            lo = hi
+        if hi is None:
+            hi = lo
+        if lo > hi:
+            lo, hi = hi, lo
+        add_item(items, tr_title(name), unit, lo, hi)
     return list(items.values())
 
 
 def same_prices(a, b):
-    """İki ürün listesi birebir aynı fiyatları içeriyorsa True (kaynak güncellenmemiş olabilir)."""
+    """Iki listedeki fiyatli urunler birebir ayniysa True (kaynak guncellenmemis olabilir)."""
     def key(items):
-        return sorted((i["name"].lower(), i["min"], i["max"]) for i in items)
-    return bool(a) and key(a) == key(b)
+        return sorted((i["name"].lower(), i["min"], i["max"]) for i in items if i["min"] is not None)
+    ka = key(a)
+    return bool(ka) and ka == key(b)
 
 
 def fetch(url):
@@ -136,6 +148,12 @@ def fetch(url):
     r.raise_for_status()
     r.encoding = "utf-8"
     return r.text
+
+
+def parse_source(src, html):
+    if src.get("parser") == "rows5":
+        return parse_rows5(html, src["section"])
+    return parse_html(html)
 
 
 def main():
@@ -146,7 +164,7 @@ def main():
     existing = json.loads(day_file.read_text("utf-8")) if day_file.exists() else {"date": today, "halls": []}
     by_id = {h["id"]: h for h in existing["halls"]}
 
-    # Bir önceki kayıtlı günün fiyatları (aynı fiyatları tespit etmek için)
+    # Bir onceki kayitli gunun fiyatlari (ayni fiyatlari tespit etmek icin)
     prev_dates = sorted((p.stem for p in DATA.glob("????-??-??.json") if p.stem < today), reverse=True)
     prev = {}
     if prev_dates:
@@ -158,11 +176,11 @@ def main():
         items, used, note = [], "", ""
         for src in hall["sources"]:
             try:
-                items = parse_html(fetch(src["url"]))
+                items = parse_source(src, fetch(src["url"]))
                 if items:
                     used, note = src["url"], src.get("note", "")
                     break
-                print(f"[{hall['id']}] {src['url']}: tabloda fiyat bulunamadı", file=sys.stderr)
+                print(f"[{hall['id']}] {src['url']}: fiyat bulunamadi", file=sys.stderr)
             except Exception as e:  # noqa: BLE001
                 print(f"[{hall['id']}] {src['url']}: hata: {e}", file=sys.stderr)
         if items:
@@ -172,15 +190,15 @@ def main():
                 "stale": stale, "items": items,
             }
             ok += 1
-            print(f"[{hall['id']}] {len(items)} ürün" + (" (önceki kayıtla aynı!)" if stale else ""))
+            print(f"[{hall['id']}] {len(items)} urun" + (" (onceki kayitla ayni!)" if stale else ""))
         elif hall["id"] not in by_id:
             by_id[hall["id"]] = {
                 "id": hall["id"], "name": hall["name"], "source": "",
-                "note": "Bugün için veri alınamadı", "items": [],
+                "note": hall.get("empty_note", "Bugün için kaynakta fiyat yok"), "items": [],
             }
 
     if ok == 0 and not day_file.exists():
-        print("Hiçbir haldan veri alınamadı; dosya yazılmadı.", file=sys.stderr)
+        print("Hicbir haldan veri alinamadi; dosya yazilmadi.", file=sys.stderr)
         return 1
 
     out = {"date": today, "halls": [by_id[h["id"]] for h in cfg["halls"] if h["id"] in by_id]}
