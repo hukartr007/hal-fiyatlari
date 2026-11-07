@@ -3,7 +3,8 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from scrape import add_trends, find_dates, page_date, parse_html, parse_rows5, parse_source, same_prices, tr_title  # noqa: E402
+from scrape import (add_trends, find_dates, page_date, parse_html, parse_rows5, parse_source, same_prices,  # noqa: E402
+                    stale_since, tr_title)
 
 # batiakdeniztv "list" bicimi: ilk tabloda basliklar, sonrakilerde bos baslik satiri
 LIST = """
@@ -125,4 +126,10 @@ new = [{"name": "domates", "unit": "kg", "min": 12, "max": 14},
        {"name": "Yeni", "unit": "kg", "min": 5, "max": 6}]
 add_trends(new, old)
 assert [i.get("trend") for i in new] == ["up", "down", None, None, None], new
+# kac gundur ayni?
+other = [{"name": "Domates", "unit": "kg", "min": 1, "max": 2}]
+hist = [("2026-11-06", a), ("2026-11-05", []), ("2026-11-04", a), ("2026-11-03", other), ("2026-11-02", a)]
+assert stale_since(a, hist) == "2026-11-04", stale_since(a, hist)  # bos gun atlanir, farkli gunde durur
+assert stale_since(a, [("2026-11-06", other)]) is None
+assert stale_since(a, []) is None
 print("tamam")
