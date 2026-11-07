@@ -240,6 +240,19 @@ def add_trends(items, prev_items):
     return items
 
 
+def stale_since(items, history):
+    """history: (tarih, urunler) en yeniden eskiye. Fiyatlar kac gundur ayniysa en eski gunun tarihi.
+    Verisiz gunler atlanir; fiyat farkli cikan ilk gunde durulur."""
+    since = None
+    for d, old in history:
+        if not old:
+            continue
+        if not same_prices(items, old):
+            break
+        since = d
+    return since
+
+
 def fetch(url):
     r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
     r.raise_for_status()
@@ -266,11 +279,14 @@ def main():
 
     # Bir onceki kayitli gunun fiyatlari (ayni fiyatlari tespit etmek icin)
     prev_dates = sorted((p.stem for p in DATA.glob("????-??-??.json") if p.stem < today), reverse=True)
-    prev = {}
-    for d in prev_dates[:10]:  # her hal icin, fiyati olan en son onceki kayit
-        for h in json.loads((DATA / f"{d}.json").read_text("utf-8")).get("halls", []):
-            if h.get("items") and h["id"] not in prev:
-                prev[h["id"]] = h
+    hist = []  # (tarih, {hal_id: hal}) en yeniden eskiye
+    for d in prev_dates[:10]:
+        hist.append((d, {h["id"]: h for h in json.loads((DATA / f"{d}.json").read_text("utf-8")).get("halls", [])}))
+    prev = {}  # her hal icin, fiyati olan en son onceki kayit
+    for d, halls in hist:
+        for hid, h in halls.items():
+            if h.get("items") and hid not in prev:
+                prev[hid] = h
 
     ok = 0
     for hall in cfg["halls"]:
@@ -287,14 +303,15 @@ def main():
         if items:
             prev_items = prev.get(hall["id"], {}).get("items", [])
             stale = same_prices(items, prev_items)
+            since = stale_since(items, [(d, hs.get(hall["id"], {}).get("items", [])) for d, hs in hist]) if stale else None
             add_trends(items, prev_items)
             by_id[hall["id"]] = {
                 "id": hall["id"], "name": hall["name"], "source": used, "note": note,
-                "source_date": sdate, "stale": stale, "items": items,
+                "source_date": sdate, "stale": stale, "stale_since": since, "items": items,
             }
             ok += 1
             print(f"[{hall['id']}] {len(items)} urun, kaynak tarihi: {sdate or 'YOK'}"
-                  + (" (onceki kayitla ayni!)" if stale else ""))
+                  + (f" (GUNCELLENMEDI: {since} kaydiyla ayni)" if stale else ""))
         elif by_id.get(hall["id"], {}).get("source") not in [s["url"] for s in hall["sources"]]:
             by_id[hall["id"]] = {
                 "id": hall["id"], "name": hall["name"], "source": "",
