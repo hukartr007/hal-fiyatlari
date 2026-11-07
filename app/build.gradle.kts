@@ -10,6 +10,11 @@ plugins {
 val dataBaseUrl: String = (project.findProperty("DATA_BASE_URL") as String?)
     ?: "https://raw.githubusercontent.com/KULLANICI/hal-fiyatlari/main/data"
 
+// GitHub Actions derleme numarası: uygulamada "Sürüm" olarak görünür, hangi APK'nın kurulu olduğu anlaşılır.
+val buildNo: Int = (project.findProperty("BUILD_NUMBER") as String?)?.toIntOrNull() ?: 1
+val buildStamp: String = java.time.ZonedDateTime.now(java.time.ZoneId.of("Europe/Istanbul"))
+    .format(java.time.format.DateTimeFormatter.ofPattern("d.MM HH:mm"))
+
 android {
     namespace = "tr.hal.fiyatlari"
     compileSdk = 35
@@ -18,9 +23,10 @@ android {
         applicationId = "tr.hal.fiyatlari"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = buildNo
+        versionName = "1.0.$buildNo"
         buildConfigField("String", "DATA_BASE_URL", "\"$dataBaseUrl\"")
+        buildConfigField("String", "VERSION_LABEL", "\"#$buildNo - $buildStamp\"")
     }
 
     buildFeatures {
