@@ -85,19 +85,19 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx
         return out
     }
 
-    /** Fiyatın eski tarihli, tarihsiz ya da değişmemiş olduğunu belirten kısa not. */
+    /** Fiyatın güncellenmediğini, eski tarihli ya da tarihsiz olduğunu belirten kısa not. */
     private fun hallMarks(h: Hall, dataDate: String, mark: Boolean): String {
         if (!mark) return ""
-        val sb = StringBuilder()
+        if (h.stale) return " (güncellenmedi)"
         val age = sourceAgeDays(h.sourceDate, dataDate)
         val sd = h.sourceDate
-        if (sd == null) {
-            sb.append(" (tarih belirsiz)")
+        return if (sd == null) {
+            " (tarih belirsiz)"
         } else if (age != null && age > 0) {
-            sb.append(" (${shortDate(sd)} fiyatı)")
+            " (${shortDate(sd)} fiyatı)"
+        } else {
+            ""
         }
-        if (h.stale) sb.append(" (değişmedi)")
-        return sb.toString()
     }
 
     private fun showNotification(ctx: Context, prefs: Prefs, day: DayData, changedToday: Boolean): Boolean {
