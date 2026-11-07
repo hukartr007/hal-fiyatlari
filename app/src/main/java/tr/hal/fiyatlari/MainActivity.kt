@@ -133,7 +133,16 @@ fun App() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Hal Fiyatları") },
+                title = {
+                    Column {
+                        Text("Hal Fiyatları")
+                        Text(
+                            "Sürüm ${BuildConfig.VERSION_LABEL}",
+                            fontSize = 10.sp,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                },
                 actions = {
                     TextButton(onClick = { showDate = true }) {
                         Text(selected?.let { prettyDate(it) } ?: "Tarih")
