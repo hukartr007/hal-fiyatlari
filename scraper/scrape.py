@@ -16,7 +16,7 @@ import sys
 from zoneinfo import ZoneInfo
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -135,12 +135,109 @@ def parse_rows5(html, section):
     return list(items.values())
 
 
+MONTHS = {
+    "ocak": 1, "şubat": 2, "mart": 3, "nisan": 4, "mayıs": 5, "haziran": 6,
+    "temmuz": 7, "ağustos": 8, "eylül": 9, "ekim": 10, "kasım": 11, "aralık": 12,
+}
+DATE_TR = re.compile(r"\b(\d{1,2})\s+(" + "|".join(MONTHS) + r")\s+(20\d{2})\b")
+DATE_DOT = re.compile(r"\b(\d{1,2})\.(\d{1,2})\.(20\d{2})\b")
+
+
+def _iso(y, m, d):
+    try:
+        return datetime.date(int(y), int(m), int(d)).isoformat()
+    except ValueError:
+        return None
+
+
+def find_dates(text):
+    """Metindeki tarihleri (sira, ISO) olarak dondurur. '6 KASIM 2026' ve '04.11.2026' tanir.
+    Tireli '06-11-2026' (sitenin kenar cubugundaki bugunun tarihi) bilerek taninmaz."""
+    t = text.replace("I", "ı").replace("İ", "i").lower()
+    out = []
+    for m in DATE_TR.finditer(t):
+        iso = _iso(m.group(3), MONTHS[m.group(2)], m.group(1))
+        if iso:
+            out.append((m.start(), iso))
+    for m in DATE_DOT.finditer(t):
+        iso = _iso(m.group(3), m.group(2), m.group(1))
+        if iso:
+            out.append((m.start(), iso))
+    return sorted(out)
+
+
+def _has_price(table):
+    for tr in table.find_all("tr"):
+        cells = [c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])]
+        if len(cells) >= 2 and any(re.search(r"\d", c) or "pazarlık" in c.lower() for c in cells[1:]):
+            return True
+    return False
+
+
+def page_date(html):
+    """Fiyat tablolarinin sayfada yazan tarihi (ISO) ya da None.
+
+    Her fiyatli tablo icin once tablonun ilk satirlarindaki tarih, yoksa tablodan hemen onceki
+    metindeki son tarih, yoksa onceki tablonun tarihi kullanilir. Birden fazla tarih varsa EN ESKISI
+    dondurulur (yaniltmamak icin). Herhangi bir fiyatli tablo tarihsiz kalirsa None."""
+    soup = BeautifulSoup(html, "lxml")
+    root = soup.body or soup
+    buf = []
+    carry = None
+    dates = []
+    for el in root.descendants:
+        if isinstance(el, NavigableString):
+            if el.parent is not None and el.parent.name in ("script", "style", "noscript"):
+                continue
+            s = str(el).strip()
+            if s:
+                buf.append(s)
+        elif getattr(el, "name", None) == "table":
+            inner = find_dates(el.get_text(" ", strip=True)[:300])
+            pre = find_dates(" ".join(buf[-80:]))
+            if inner:
+                carry = inner[0][1]
+            elif pre:
+                carry = pre[-1][1]
+            buf = []
+            if _has_price(el):
+                dates.append(carry)
+    if not dates or any(d is None for d in dates):
+        return None
+    return min(dates)
+
+
 def same_prices(a, b):
     """Iki listedeki fiyatli urunler birebir ayniysa True (kaynak guncellenmemis olabilir)."""
     def key(items):
         return sorted((i["name"].lower(), i["min"], i["max"]) for i in items if i["min"] is not None)
     ka = key(a)
     return bool(ka) and ka == key(b)
+
+
+def _mid(i):
+    v = [x for x in (i.get("min"), i.get("max")) if x is not None]
+    return sum(v) / len(v) if v else None
+
+
+def add_trends(items, prev_items):
+    """Onceki kayda gore fiyati artan urune trend="up", dusene "down" ekler (degismediyse eklemez)."""
+    old = {}
+    for i in prev_items:
+        m = _mid(i)
+        if m is not None:
+            old[(i["name"].lower(), i.get("unit", "kg"))] = m
+    for i in items:
+        i.pop("trend", None)
+        m = _mid(i)
+        o = old.get((i["name"].lower(), i.get("unit", "kg")))
+        if m is None or o is None:
+            continue
+        if m > o + 0.005:
+            i["trend"] = "up"
+        elif m < o - 0.005:
+            i["trend"] = "down"
+    return items
 
 
 def fetch(url):
@@ -151,9 +248,12 @@ def fetch(url):
 
 
 def parse_source(src, html):
+    """(urunler, kaynaktaki fiyat tarihi) dondurur."""
     if src.get("parser") == "rows5":
-        return parse_rows5(html, src["section"])
-    return parse_html(html)
+        items = parse_rows5(html, src["section"])
+    else:
+        items = parse_html(html)
+    return items, page_date(html)
 
 
 def main():
@@ -167,16 +267,17 @@ def main():
     # Bir onceki kayitli gunun fiyatlari (ayni fiyatlari tespit etmek icin)
     prev_dates = sorted((p.stem for p in DATA.glob("????-??-??.json") if p.stem < today), reverse=True)
     prev = {}
-    if prev_dates:
-        prev_data = json.loads((DATA / f"{prev_dates[0]}.json").read_text("utf-8"))
-        prev = {h["id"]: h for h in prev_data.get("halls", [])}
+    for d in prev_dates[:10]:  # her hal icin, fiyati olan en son onceki kayit
+        for h in json.loads((DATA / f"{d}.json").read_text("utf-8")).get("halls", []):
+            if h.get("items") and h["id"] not in prev:
+                prev[h["id"]] = h
 
     ok = 0
     for hall in cfg["halls"]:
-        items, used, note = [], "", ""
+        items, used, note, sdate = [], "", "", None
         for src in hall["sources"]:
             try:
-                items = parse_source(src, fetch(src["url"]))
+                items, sdate = parse_source(src, fetch(src["url"]))
                 if items:
                     used, note = src["url"], src.get("note", "")
                     break
@@ -184,13 +285,16 @@ def main():
             except Exception as e:  # noqa: BLE001
                 print(f"[{hall['id']}] {src['url']}: hata: {e}", file=sys.stderr)
         if items:
-            stale = same_prices(items, prev.get(hall["id"], {}).get("items", []))
+            prev_items = prev.get(hall["id"], {}).get("items", [])
+            stale = same_prices(items, prev_items)
+            add_trends(items, prev_items)
             by_id[hall["id"]] = {
                 "id": hall["id"], "name": hall["name"], "source": used, "note": note,
-                "stale": stale, "items": items,
+                "source_date": sdate, "stale": stale, "items": items,
             }
             ok += 1
-            print(f"[{hall['id']}] {len(items)} urun" + (" (onceki kayitla ayni!)" if stale else ""))
+            print(f"[{hall['id']}] {len(items)} urun, kaynak tarihi: {sdate or 'YOK'}"
+                  + (" (onceki kayitla ayni!)" if stale else ""))
         elif by_id.get(hall["id"], {}).get("source") not in [s["url"] for s in hall["sources"]]:
             by_id[hall["id"]] = {
                 "id": hall["id"], "name": hall["name"], "source": "",
