@@ -87,6 +87,11 @@ object Repo {
                         note = h.optString("note", ""),
                         items = items,
                         stale = h.optBoolean("stale", false),
+                        staleSince = if (h.has("stale_since") && !h.isNull("stale_since")) {
+                            h.getString("stale_since")
+                        } else {
+                            null
+                        },
                         sourceDate = if (h.has("source_date") && !h.isNull("source_date")) {
                             h.getString("source_date")
                         } else {
