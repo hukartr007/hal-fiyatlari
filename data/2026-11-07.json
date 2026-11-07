@@ -6,9 +6,9 @@
    "name": "Antalya",
    "source": "https://www.batiakdeniztv.com/antalya-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-06",
-   "stale": true,
-   "stale_since": "2026-11-06",
+   "source_date": "2026-11-07",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
@@ -19,8 +19,9 @@
     {
      "name": "Kokteyl Domates",
      "unit": "kg",
-     "min": 80.0,
-     "max": 100.0
+     "min": 60.0,
+     "max": 80.0,
+     "trend": "down"
     },
     {
      "name": "Sivri Biber",
@@ -67,26 +68,30 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 60.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Kabak",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "up"
     },
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 33.0,
-     "max": 33.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "up"
     },
     {
      "name": "Salatalık ( Silor )",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "up"
     }
    ]
   },
@@ -95,9 +100,9 @@
    "name": "Kumluca",
    "source": "https://www.batiakdeniztv.com/kumluca-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-06",
-   "stale": true,
-   "stale_since": "2026-11-06",
+   "source_date": "2026-11-07",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
@@ -114,8 +119,9 @@
     {
      "name": "Oval Domates",
      "unit": "kg",
-     "min": 80.0,
-     "max": 100.0
+     "min": 70.0,
+     "max": 90.0,
+     "trend": "down"
     },
     {
      "name": "Çarli Biber",
@@ -174,8 +180,9 @@
     {
      "name": "Salatalık (Silor)",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 33.0,
+     "max": 33.0,
+     "trend": "up"
     },
     {
      "name": "Dikenli Salatalık",
@@ -186,14 +193,16 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 40.0,
-     "max": 50.0
+     "min": 50.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Kabak",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "up"
     }
    ]
   },
@@ -202,9 +211,9 @@
    "name": "Serik",
    "source": "https://www.batiakdeniztv.com/serik-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-06",
-   "stale": true,
-   "stale_since": "2026-11-06",
+   "source_date": "2026-11-07",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
@@ -215,8 +224,9 @@
     {
      "name": "Domates Kokteyl",
      "unit": "kg",
-     "min": 90.0,
-     "max": 90.0
+     "min": 80.0,
+     "max": 80.0,
+     "trend": "down"
     },
     {
      "name": "Sivri Biber",
@@ -251,26 +261,30 @@
     {
      "name": "Kabak",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "up"
     },
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 60.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Salata",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 32.0,
+     "max": 32.0,
+     "trend": "up"
     },
     {
      "name": "Silor",
      "unit": "kg",
-     "min": 30.0,
-     "max": 30.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "up"
     }
    ]
   },
@@ -400,9 +414,9 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-06",
-   "stale": true,
-   "stale_since": "2026-11-06",
+   "source_date": "2026-11-07",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Salatalık",
@@ -413,8 +427,9 @@
     {
      "name": "Silor",
      "unit": "kg",
-     "min": 20.0,
-     "max": 25.0
+     "min": 28.0,
+     "max": 33.0,
+     "trend": "up"
     },
     {
      "name": "Dikenli Salatalık",
@@ -437,8 +452,9 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 35.0,
-     "max": 50.0
+     "min": 40.0,
+     "max": 55.0,
+     "trend": "up"
     },
     {
      "name": "Topak Patlıcan",
@@ -449,8 +465,9 @@
     {
      "name": "Kabak",
      "unit": "kg",
-     "min": 20.0,
-     "max": 25.0
+     "min": 25.0,
+     "max": 30.0,
+     "trend": "up"
     },
     {
      "name": "Muz Yerli",
