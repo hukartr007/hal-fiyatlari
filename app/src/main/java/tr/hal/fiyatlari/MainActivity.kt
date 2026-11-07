@@ -48,6 +48,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -160,11 +161,16 @@ fun App() {
                     val idx = tab.coerceIn(0, d.halls.lastIndex)
                     ScrollableTabRow(selectedTabIndex = idx, edgePadding = 8.dp) {
                         d.halls.forEachIndexed { i, h ->
-                            Tab(selected = idx == i, onClick = { tab = i }, text = { Text(h.name) })
+                            Tab(
+                                selected = idx == i,
+                                onClick = { tab = i },
+                                text = { Text(h.name + if (hallWarn(h, d.date)) " ⚠" else "") }
+                            )
                         }
                     }
                     HallList(
                         hall = d.halls[idx],
+                        dataDate = d.date,
                         favs = favs,
                         onToggle = { name ->
                             val n = favs.toMutableSet()
@@ -311,7 +317,7 @@ fun App() {
 }
 
 @Composable
-fun HallList(hall: Hall, favs: Set<String>, onToggle: (String) -> Unit) {
+fun HallList(hall: Hall, dataDate: String, favs: Set<String>, onToggle: (String) -> Unit) {
     var query by remember(hall.id) { mutableStateOf("") }
     val shown = remember(hall, query) { hall.items.filter { it.name.contains(query, ignoreCase = true) } }
 
@@ -330,6 +336,34 @@ fun HallList(hall: Hall, favs: Set<String>, onToggle: (String) -> Unit) {
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+        }
+        if (hall.items.isNotEmpty()) {
+            val sd = hall.sourceDate
+            val age = sourceAgeDays(sd, dataDate)
+            if (sd == null) {
+                Text(
+                    "⚠ Kaynak, fiyatların hangi güne ait olduğunu yazmıyor.",
+                    Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.error
+                )
+            } else if (age != null && age > 0) {
+                Text(
+                    "⚠ Bu fiyatlar ${prettyDate(sd)} tarihli ($age gün eski). Güncel değil.",
+                    Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.error
+                )
+            } else {
+                Text(
+                    "Fiyat tarihi: ${prettyDate(sd)}",
+                    Modifier.padding(horizontal = 12.dp, vertical = 2.dp),
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
         }
         if (hall.stale) {
             Text(
@@ -355,8 +389,16 @@ fun HallList(hall: Hall, favs: Set<String>, onToggle: (String) -> Unit) {
                     Text(
                         priceText(item),
                         fontWeight = FontWeight.SemiBold,
-                        modifier = Modifier.padding(end = 12.dp)
+                        modifier = Modifier.padding(end = if (item.trend == 0) 12.dp else 4.dp)
                     )
+                    if (item.trend != 0) {
+                        Text(
+                            if (item.trend > 0) "▲" else "▼",
+                            color = if (item.trend > 0) Color(0xFF2E7D32) else Color(0xFFC62828),
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(end = 12.dp)
+                        )
+                    }
                 }
                 HorizontalDivider()
             }
