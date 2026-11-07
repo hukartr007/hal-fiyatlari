@@ -11,6 +11,8 @@ data class Hall(
     val items: List<HalItem>,
     /** true: fiyatlar önceki kayıtla birebir aynı, kaynak güncellenmemiş olabilir. */
     val stale: Boolean = false,
+    /** stale ise: fiyatların aynı olduğu en eski kayıt günü (YYYY-MM-DD). */
+    val staleSince: String? = null,
     /** Kaynak sayfanın fiyatlar için yazdığı tarih (YYYY-MM-DD); sayfa yazmıyorsa null. */
     val sourceDate: String? = null,
 )
