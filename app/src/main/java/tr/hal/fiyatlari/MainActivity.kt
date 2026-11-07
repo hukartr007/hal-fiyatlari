@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -90,6 +91,7 @@ fun App() {
     var favs by remember { mutableStateOf(prefs.favorites) }
     var showDate by remember { mutableStateOf(false) }
     var showSettings by remember { mutableStateOf(false) }
+    var showProducts by remember { mutableStateOf(false) }
     var reload by remember { mutableIntStateOf(0) }
     var hallOptions by remember { mutableStateOf<List<Pair<String, String>>>(emptyList()) }
 
@@ -254,6 +256,14 @@ fun App() {
                             }
                         }
                     }
+                    Text("Bildirimde gösterilecek ürünler", fontWeight = FontWeight.SemiBold)
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            if (favs.isEmpty()) "Henüz ürün seçilmedi" else "${favs.size} ürün seçili",
+                            Modifier.weight(1f)
+                        )
+                        TextButton(onClick = { showProducts = true }) { Text("Ürün seç") }
+                    }
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text("Fiyat değişince tekrar bildir", Modifier.weight(1f))
                         Switch(checked = renotify, onCheckedChange = { renotify = it })
@@ -273,13 +283,13 @@ fun App() {
                         )
                         Text(
                             "SMS, telefonundaki hattan gönderilir ve operatör ücreti uygulanır. " +
-                                "Yalnızca favori (★) ürünlerin fiyatı gönderilir.",
+                                "Yalnızca seçili (★) ürünlerin fiyatı gönderilir.",
                             fontSize = 12.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                     Text(
-                        "Listedeki ☆ simgesine dokunup ürünleri favoriye ekle; bildirimde favori ürünlerin " +
+                        "Ürünleri \"Ürün seç\"ten ya da listedeki ☆ simgesinden seçebilirsin (ikisi aynı listedir); bildirimde seçili ürünlerin " +
                             "fiyatı gösterilir. Android arka plan işlerini tam saatinde çalıştırmayı " +
                             "garanti etmez, bildirim birkaç saat kayabilir.",
                         fontSize = 12.sp,
@@ -314,6 +324,71 @@ fun App() {
             dismissButton = { TextButton(onClick = { showSettings = false }) { Text("İptal") } }
         )
     }
+
+    if (showProducts) {
+        val names = remember(day, favs) {
+            (day?.halls.orEmpty().flatMap { h -> h.items.map { it.name } } + favs)
+                .distinctBy { it.lowercase() }
+                .sortedBy { it.lowercase() }
+        }
+        ProductPicker(
+            all = names,
+            selected = favs,
+            onDone = { sel ->
+                favs = sel
+                prefs.favorites = sel
+                prefs.lastSignature = ""
+                showProducts = false
+            },
+            onCancel = { showProducts = false }
+        )
+    }
+}
+
+/** Bildirim (ve SMS) için ürün seçme penceresi; liste, hal listesindeki ★ ile aynıdır. */
+@Composable
+fun ProductPicker(all: List<String>, selected: Set<String>, onDone: (Set<String>) -> Unit, onCancel: () -> Unit) {
+    var sel by remember { mutableStateOf(selected) }
+    var q by remember { mutableStateOf("") }
+    val shown = remember(q, all) { all.filter { it.contains(q, ignoreCase = true) } }
+    AlertDialog(
+        onDismissRequest = onCancel,
+        title = { Text("Bildirimde gösterilecek ürünler") },
+        text = {
+            Column {
+                OutlinedTextField(
+                    value = q,
+                    onValueChange = { q = it },
+                    singleLine = true,
+                    label = { Text("Ürün ara") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Text(
+                    "${sel.size} ürün seçili",
+                    Modifier.padding(vertical = 6.dp),
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                LazyColumn(Modifier.heightIn(max = 360.dp)) {
+                    items(shown) { name ->
+                        val on = sel.any { it.equals(name, ignoreCase = true) }
+                        val toggle = {
+                            sel = if (on) sel.filter { !it.equals(name, ignoreCase = true) }.toSet() else sel + name
+                        }
+                        Row(
+                            Modifier.fillMaxWidth().clickable { toggle() },
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Checkbox(checked = on, onCheckedChange = { toggle() })
+                            Text(name)
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = { onDone(sel) }) { Text("Tamam") } },
+        dismissButton = { TextButton(onClick = onCancel) { Text("İptal") } }
+    )
 }
 
 @Composable
@@ -367,7 +442,8 @@ fun HallList(hall: Hall, dataDate: String, favs: Set<String>, onToggle: (String)
         }
         if (hall.stale) {
             Text(
-                "⚠ Fiyatlar önceki kayıtla aynı; kaynak güncellenmemiş olabilir.",
+                hall.staleSince?.let { "⚠ Fiyatlar güncellenmedi: ${prettyDate(it)} kaydıyla aynı." }
+                    ?: "⚠ Fiyatlar güncellenmedi: önceki kayıtla aynı.",
                 Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.error
