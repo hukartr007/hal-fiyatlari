@@ -48,9 +48,9 @@ fun sourceAgeDays(sourceDate: String?, dataDate: String): Long? = try {
     null
 }
 
-/** Fiyatı olan bir halin tarihi eskiyse ya da kaynak tarih yazmıyorsa true (sekmede ⚠ gösterilir). */
+/** Fiyatı olan halin fiyatı güncellenmemişse, tarihi eskiyse ya da kaynak tarih yazmıyorsa true (sekmede ⚠ gösterilir). */
 fun hallWarn(h: Hall, dataDate: String): Boolean {
     if (h.items.isEmpty()) return false
     val age = sourceAgeDays(h.sourceDate, dataDate)
-    return h.sourceDate == null || (age != null && age > 0)
+    return h.stale || h.sourceDate == null || (age != null && age > 0)
 }
