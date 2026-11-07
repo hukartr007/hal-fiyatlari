@@ -12,8 +12,6 @@ val dataBaseUrl: String = (project.findProperty("DATA_BASE_URL") as String?)
 
 // GitHub Actions derleme numarası: uygulamada "Sürüm" olarak görünür, hangi APK'nın kurulu olduğu anlaşılır.
 val buildNo: Int = (project.findProperty("BUILD_NUMBER") as String?)?.toIntOrNull() ?: 1
-val buildStamp: String = java.time.ZonedDateTime.now(java.time.ZoneId.of("Europe/Istanbul"))
-    .format(java.time.format.DateTimeFormatter.ofPattern("d.MM HH:mm"))
 
 android {
     namespace = "tr.hal.fiyatlari"
@@ -26,7 +24,7 @@ android {
         versionCode = buildNo
         versionName = "1.0.$buildNo"
         buildConfigField("String", "DATA_BASE_URL", "\"$dataBaseUrl\"")
-        buildConfigField("String", "VERSION_LABEL", "\"#$buildNo - $buildStamp\"")
+        buildConfigField("String", "VERSION_LABEL", "\"#$buildNo\"")
     }
 
     buildFeatures {
