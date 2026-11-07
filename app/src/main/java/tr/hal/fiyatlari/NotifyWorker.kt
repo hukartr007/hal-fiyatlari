@@ -78,11 +78,26 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx
         for (fav in prefs.favorites.sorted()) {
             val parts = halls.mapNotNull { h ->
                 h.items.firstOrNull { it.name.equals(fav, ignoreCase = true) }
-                    ?.let { "${h.name} ${priceText(it)}" + if (markStale && h.stale) " (değişmedi)" else "" }
+                    ?.let { "${h.name} ${priceText(it)}${trendMark(it)}" + hallMarks(h, day.date, markStale) }
             }
             if (parts.isNotEmpty()) out.add("$fav: ${parts.joinToString(", ")}")
         }
         return out
+    }
+
+    /** Fiyatın eski tarihli, tarihsiz ya da değişmemiş olduğunu belirten kısa not. */
+    private fun hallMarks(h: Hall, dataDate: String, mark: Boolean): String {
+        if (!mark) return ""
+        val sb = StringBuilder()
+        val age = sourceAgeDays(h.sourceDate, dataDate)
+        val sd = h.sourceDate
+        if (sd == null) {
+            sb.append(" (tarih belirsiz)")
+        } else if (age != null && age > 0) {
+            sb.append(" (${shortDate(sd)} fiyatı)")
+        }
+        if (h.stale) sb.append(" (değişmedi)")
+        return sb.toString()
     }
 
     private fun showNotification(ctx: Context, prefs: Prefs, day: DayData, changedToday: Boolean): Boolean {
@@ -133,7 +148,7 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx
         if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.SEND_SMS)
             != PackageManager.PERMISSION_GRANTED
         ) return false
-        val lines = favLines(prefs, day, false)
+        val lines = favLines(prefs, day, true)
         if (lines.isEmpty()) return false
 
         val numberRegex = Regex("^\\+?[0-9]{10,13}$")
@@ -166,7 +181,7 @@ class NotifyWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx
 
     /** Türkçe karakterleri ve ₺'yi sadeleştirir; SMS kısa (160 karakterlik) parçalarda kalır, ücret düşer. */
     private fun asciiTr(s: String): String = s
-        .replace("₺", "TL").replace("–", "-")
+        .replace("▲", "(artti)").replace("▼", "(dustu)").replace("₺", "TL").replace("–", "-")
         .replace('ç', 'c').replace('Ç', 'C').replace('ğ', 'g').replace('Ğ', 'G')
         .replace('ı', 'i').replace('İ', 'I').replace('ö', 'o').replace('Ö', 'O')
         .replace('ş', 's').replace('Ş', 'S').replace('ü', 'u').replace('Ü', 'U')
