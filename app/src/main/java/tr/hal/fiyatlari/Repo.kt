@@ -70,6 +70,11 @@ object Repo {
                                 unit = it.optString("unit", "kg"),
                                 min = if (it.isNull("min")) null else it.getDouble("min"),
                                 max = if (it.isNull("max")) null else it.getDouble("max"),
+                                trend = when (it.optString("trend", "")) {
+                                    "up" -> 1
+                                    "down" -> -1
+                                    else -> 0
+                                },
                             )
                         )
                     }
@@ -82,6 +87,11 @@ object Repo {
                         note = h.optString("note", ""),
                         items = items,
                         stale = h.optBoolean("stale", false),
+                        sourceDate = if (h.has("source_date") && !h.isNull("source_date")) {
+                            h.getString("source_date")
+                        } else {
+                            null
+                        },
                     )
                 )
             }
