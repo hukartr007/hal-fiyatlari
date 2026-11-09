@@ -212,15 +212,16 @@
    "name": "Serik",
    "source": "https://www.batiakdeniztv.com/serik-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-07",
-   "stale": true,
-   "stale_since": "2026-11-07",
+   "source_date": "2026-11-09",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 45.0,
-     "max": 45.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "up"
     },
     {
      "name": "Domates Kokteyl",
@@ -261,35 +262,85 @@
     {
      "name": "Kabak",
      "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
+     "min": 40.0,
+     "max": 40.0,
+     "trend": "up"
     },
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 65.0,
+     "max": 65.0,
+     "trend": "up"
     },
     {
      "name": "Salata",
      "unit": "kg",
-     "min": 32.0,
-     "max": 32.0
+     "min": 38.0,
+     "max": 38.0,
+     "trend": "up"
     },
     {
      "name": "Silor",
      "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
+     "min": 40.0,
+     "max": 40.0,
+     "trend": "up"
     }
    ]
   },
   {
    "id": "demre",
    "name": "Demre",
-   "source": "",
-   "note": "Bugün için kaynakta fiyat yok",
-   "items": []
+   "source": "https://www.batiakdeniztv.com/demre-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": null,
+   "stale": false,
+   "stale_since": null,
+   "items": [
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 37.0,
+     "max": 37.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 52.0,
+     "max": 52.0
+    },
+    {
+     "name": "Üçburun Köy B",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Yeşil Dolma B",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 75.0,
+     "max": 75.0
+    },
+    {
+     "name": "Macar Çarli",
+     "unit": "kg",
+     "min": 65.0,
+     "max": 65.0
+    },
+    {
+     "name": "Macar Dolma",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    }
+   ]
   },
   {
    "id": "elmali",
@@ -410,33 +461,37 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-07",
-   "stale": true,
-   "stale_since": "2026-11-07",
+   "source_date": "2026-11-09",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 25.0,
-     "max": 30.0
+     "min": 33.0,
+     "max": 38.0,
+     "trend": "up"
     },
     {
      "name": "Silor",
      "unit": "kg",
-     "min": 28.0,
-     "max": 33.0
+     "min": 35.0,
+     "max": 40.0,
+     "trend": "up"
     },
     {
      "name": "Dikenli Salatalık",
      "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
+     "min": 40.0,
+     "max": 40.0,
+     "trend": "up"
     },
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
+     "min": 42.0,
+     "max": 42.0,
+     "trend": "up"
     },
     {
      "name": "Fasulye",
@@ -447,20 +502,23 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 40.0,
-     "max": 55.0
+     "min": 45.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Topak Patlıcan",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 65.0,
+     "max": 65.0,
+     "trend": "up"
     },
     {
      "name": "Kabak",
      "unit": "kg",
-     "min": 25.0,
-     "max": 30.0
+     "min": 30.0,
+     "max": 35.0,
+     "trend": "up"
     },
     {
      "name": "Muz Yerli",
