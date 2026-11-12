@@ -6,7 +6,7 @@
    "name": "Antalya",
    "source": "https://www.batiakdeniztv.com/antalya-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-11",
+   "source_date": "2026-11-12",
    "stale": true,
    "stale_since": "2026-11-11",
    "items": [
@@ -95,7 +95,7 @@
    "name": "Kumluca",
    "source": "https://www.batiakdeniztv.com/kumluca-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-11",
+   "source_date": "2026-11-12",
    "stale": true,
    "stale_since": "2026-11-11",
    "items": [
@@ -202,7 +202,7 @@
    "name": "Serik",
    "source": "https://www.batiakdeniztv.com/serik-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-11",
+   "source_date": "2026-11-12",
    "stale": false,
    "stale_since": null,
    "items": [
@@ -285,7 +285,7 @@
    "name": "Demre",
    "source": "https://www.batiakdeniztv.com/demre-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-11",
+   "source_date": "2026-11-12",
    "stale": false,
    "stale_since": null,
    "items": [
