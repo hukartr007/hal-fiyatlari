@@ -1,0 +1,1043 @@
+{
+ "date": "2026-11-12",
+ "halls": [
+  {
+   "id": "antalya",
+   "name": "Antalya",
+   "source": "https://www.batiakdeniztv.com/antalya-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": "2026-11-11",
+   "stale": true,
+   "stale_since": "2026-11-11",
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 50.0
+    },
+    {
+     "name": "Kokteyl Domates",
+     "unit": "kg",
+     "min": 60.0,
+     "max": 80.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Kıl Sivri Biber",
+     "unit": "kg",
+     "min": 65.0,
+     "max": 65.0
+    },
+    {
+     "name": "Sivri Biber (Kılçık)",
+     "unit": "kg",
+     "min": 85.0,
+     "max": 85.0
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Dolmalık Biber",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0
+    },
+    {
+     "name": "Üç Burun Köy Biberi",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 80.0,
+     "max": 80.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Salatalık ( Silor )",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    }
+   ]
+  },
+  {
+   "id": "kumluca",
+   "name": "Kumluca",
+   "source": "https://www.batiakdeniztv.com/kumluca-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": "2026-11-11",
+   "stale": true,
+   "stale_since": "2026-11-11",
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 60.0
+    },
+    {
+     "name": "Yuvarlak Domates",
+     "unit": "kg",
+     "min": 80.0,
+     "max": 100.0
+    },
+    {
+     "name": "Oval Domates",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 90.0
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Kıl Sivri Biber",
+     "unit": "kg",
+     "min": 65.0,
+     "max": 65.0
+    },
+    {
+     "name": "Kılçık Sivri Biber",
+     "unit": "kg",
+     "min": 85.0,
+     "max": 85.0
+    },
+    {
+     "name": "Üçburun Köy Biberi",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Dolma Biber",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 80.0,
+     "max": 80.0
+    },
+    {
+     "name": "Şili Biber Kırmızı",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Salatalık (Silor)",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Dikenli Salatalık",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 60.0,
+     "max": 70.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    }
+   ]
+  },
+  {
+   "id": "serik",
+   "name": "Serik",
+   "source": "https://www.batiakdeniztv.com/serik-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": "2026-11-11",
+   "stale": false,
+   "stale_since": null,
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Domates Kokteyl",
+     "unit": "kg",
+     "min": 80.0,
+     "max": 80.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Kılçık Biber",
+     "unit": "kg",
+     "min": 85.0,
+     "max": 85.0
+    },
+    {
+     "name": "Dolma Biber",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "up"
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Üç Burun Köy Biberi",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0,
+     "trend": "up"
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "up"
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0,
+     "trend": "up"
+    },
+    {
+     "name": "Salata",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "up"
+    },
+    {
+     "name": "Silor",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "up"
+    }
+   ]
+  },
+  {
+   "id": "demre",
+   "name": "Demre",
+   "source": "https://www.batiakdeniztv.com/demre-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": "2026-11-11",
+   "stale": false,
+   "stale_since": null,
+   "items": [
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": 37.0,
+     "max": 37.0
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 52.0,
+     "max": 52.0
+    },
+    {
+     "name": "Üçburun Köy B",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0,
+     "trend": "up"
+    },
+    {
+     "name": "Yeşil Dolma B",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 75.0,
+     "max": 75.0
+    },
+    {
+     "name": "Macar Çarli",
+     "unit": "kg",
+     "min": 65.0,
+     "max": 65.0
+    },
+    {
+     "name": "Macar Dolma",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    }
+   ]
+  },
+  {
+   "id": "elmali",
+   "name": "Elmalı",
+   "source": "https://www.batiakdeniztv.com/elmali-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": null,
+   "stale": false,
+   "stale_since": null,
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Domates Oval",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Çarli Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Acı Çarli Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Kıl Sivri Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Kılçık Sivri",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Köy Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Dolma Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Silor",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Şili Biber Kırmızı",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    },
+    {
+     "name": "Şili Biber Yeşil",
+     "unit": "kg",
+     "min": null,
+     "max": null
+    }
+   ]
+  },
+  {
+   "id": "finike",
+   "name": "Finike",
+   "source": "",
+   "note": "Bugün için kaynakta fiyat yok",
+   "items": []
+  },
+  {
+   "id": "gazipasa",
+   "name": "Gazipaşa",
+   "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": "2026-11-11",
+   "stale": false,
+   "stale_since": null,
+   "items": [
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 50.0,
+     "trend": "up"
+    },
+    {
+     "name": "Silor",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 50.0,
+     "trend": "up"
+    },
+    {
+     "name": "Dikenli Salatalık",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "up"
+    },
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 42.0,
+     "max": 42.0
+    },
+    {
+     "name": "Fasulye",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 80.0,
+     "trend": "up"
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 60.0
+    },
+    {
+     "name": "Topak Patlıcan",
+     "unit": "kg",
+     "min": 65.0,
+     "max": 65.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 40.0,
+     "trend": "up"
+    },
+    {
+     "name": "Muz Yerli",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Muz Grand",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Kapya Biber",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 80.0
+    },
+    {
+     "name": "Dolmalık Biber",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "up"
+    },
+    {
+     "name": "Köy Biberi",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0,
+     "trend": "up"
+    },
+    {
+     "name": "Sivri Biber",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Çarliston Biber",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Kıl Sivri Biber",
+     "unit": "kg",
+     "min": 85.0,
+     "max": 85.0
+    }
+   ]
+  },
+  {
+   "id": "alanya",
+   "name": "Alanya",
+   "source": "https://www.batiakdeniztv.com/alanya-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
+   "source_date": "2026-11-04",
+   "stale": true,
+   "stale_since": "2026-11-11",
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 37.0,
+     "max": 42.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 47.0,
+     "max": 50.0
+    },
+    {
+     "name": "Patlıcan (Cam)",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    },
+    {
+     "name": "Topa Patlıcan",
+     "unit": "kg",
+     "min": 60.0,
+     "max": 60.0
+    },
+    {
+     "name": "Grand Muz",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Yerli Muz",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 50.0
+    }
+   ]
+  },
+  {
+   "id": "fethiye",
+   "name": "Muğla (Fethiye)",
+   "source": "https://www.batiakdeniztv.com/mugla-fethiye-hal-fiyatlari",
+   "note": "Kaynak: batiakdeniztv.com, Fethiye Karaçulha Toptancı Hali",
+   "source_date": "2026-11-09",
+   "stale": true,
+   "stale_since": "2026-11-09",
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 55.0
+    },
+    {
+     "name": "Domates Diğer",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 20.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 35.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 50.0
+    },
+    {
+     "name": "Fasulye",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0
+    },
+    {
+     "name": "Biber Sivri",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 55.0
+    },
+    {
+     "name": "Biber Çarliston",
+     "unit": "kg",
+     "min": 40.0,
+     "max": 40.0
+    },
+    {
+     "name": "Havuç",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 15.0
+    },
+    {
+     "name": "Brokoli",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 50.0
+    },
+    {
+     "name": "Karnabahar",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 30.0
+    },
+    {
+     "name": "Lahana Beyaz",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 20.0
+    },
+    {
+     "name": "Lahana Kırmızı",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 20.0
+    },
+    {
+     "name": "Marul",
+     "unit": "adet",
+     "min": 10.0,
+     "max": 20.0
+    },
+    {
+     "name": "Maydanoz",
+     "unit": "bağ",
+     "min": 6.0,
+     "max": 10.0
+    },
+    {
+     "name": "Patates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 25.0
+    },
+    {
+     "name": "Pırasa",
+     "unit": "kg",
+     "min": 25.0,
+     "max": 40.0
+    },
+    {
+     "name": "Roka",
+     "unit": "bağ",
+     "min": 6.0,
+     "max": 10.0
+    },
+    {
+     "name": "Sarımsak",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 100.0
+    },
+    {
+     "name": "Semizotu",
+     "unit": "bağ",
+     "min": 10.0,
+     "max": 15.0
+    },
+    {
+     "name": "Soğan kuru",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 25.0
+    },
+    {
+     "name": "Soğan Yeşil",
+     "unit": "bağ",
+     "min": 30.0,
+     "max": 40.0
+    },
+    {
+     "name": "Turp",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 15.0
+    },
+    {
+     "name": "Elma",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 40.0
+    },
+    {
+     "name": "Limon",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 20.0
+    },
+    {
+     "name": "Muz yerli",
+     "unit": "kg",
+     "min": 50.0,
+     "max": 70.0
+    },
+    {
+     "name": "Nar",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 30.0
+    },
+    {
+     "name": "Portakal",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 30.0
+    }
+   ]
+  },
+  {
+   "id": "mersin",
+   "name": "Mersin",
+   "source": "https://www.karekod.org/blog/mersin-hal-fiyatlari/",
+   "note": "Kaynak: karekod.org (doğrulanmadı, resmi bülten değil)",
+   "source_date": "2025-10-31",
+   "stale": true,
+   "stale_since": "2026-11-06",
+   "items": [
+    {
+     "name": "Domates",
+     "unit": "kg",
+     "min": 5.5,
+     "max": 100.0
+    },
+    {
+     "name": "Salçalık domates",
+     "unit": "kg",
+     "min": 2.0,
+     "max": 25.0
+    },
+    {
+     "name": "Salkım domates",
+     "unit": "kg",
+     "min": 20.0,
+     "max": 35.0
+    },
+    {
+     "name": "Pembe domates",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 30.0
+    },
+    {
+     "name": "Kokteyl domates",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 105.0
+    },
+    {
+     "name": "Sivri biber",
+     "unit": "kg",
+     "min": 8.0,
+     "max": 185.0
+    },
+    {
+     "name": "Çarliston biber",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 85.0
+    },
+    {
+     "name": "Dolmalık biber",
+     "unit": "kg",
+     "min": 9.0,
+     "max": 90.0
+    },
+    {
+     "name": "Salçalık kapya biber",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 85.0
+    },
+    {
+     "name": "Salatalık",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 50.0
+    },
+    {
+     "name": "Silor salatalık",
+     "unit": "kg",
+     "min": 35.0,
+     "max": 60.0
+    },
+    {
+     "name": "Patlıcan",
+     "unit": "kg",
+     "min": 4.0,
+     "max": 40.0
+    },
+    {
+     "name": "Patates",
+     "unit": "kg",
+     "min": 6.1,
+     "max": 51.0
+    },
+    {
+     "name": "Kuru soğan",
+     "unit": "kg",
+     "min": 4.0,
+     "max": 40.0
+    },
+    {
+     "name": "Kabak",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 50.0
+    },
+    {
+     "name": "Taze fasulye",
+     "unit": "kg",
+     "min": 8.0,
+     "max": 50.0
+    },
+    {
+     "name": "Karnabahar",
+     "unit": "kg",
+     "min": 4.0,
+     "max": 40.0
+    },
+    {
+     "name": "Ispanak",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 70.0
+    },
+    {
+     "name": "Beyaz lahana",
+     "unit": "kg",
+     "min": 2.0,
+     "max": 25.0
+    },
+    {
+     "name": "Kuru sarımsak",
+     "unit": "kg",
+     "min": 30.0,
+     "max": 120.0
+    },
+    {
+     "name": "Mantar",
+     "unit": "kg",
+     "min": 120.0,
+     "max": 239.76
+    },
+    {
+     "name": "Maydanoz",
+     "unit": "bağ",
+     "min": 4.0,
+     "max": 15.0
+    },
+    {
+     "name": "Iceberg marul",
+     "unit": "adet",
+     "min": 5.0,
+     "max": 40.0
+    },
+    {
+     "name": "Limon (genel kayıt)",
+     "unit": "kg",
+     "min": 3.0,
+     "max": 178.0
+    },
+    {
+     "name": "Meyer limon",
+     "unit": "kg",
+     "min": 3.0,
+     "max": 24.0
+    },
+    {
+     "name": "Lemas limon",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 10.0
+    },
+    {
+     "name": "Mandalina",
+     "unit": "kg",
+     "min": 2.5,
+     "max": 30.0
+    },
+    {
+     "name": "Satsuma mandalina",
+     "unit": "kg",
+     "min": 12.0,
+     "max": 12.0
+    },
+    {
+     "name": "Portakal",
+     "unit": "kg",
+     "min": 9.0,
+     "max": 35.0
+    },
+    {
+     "name": "Yerli Anamur muzu",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 80.0
+    },
+    {
+     "name": "Elma",
+     "unit": "kg",
+     "min": 7.0,
+     "max": 80.0
+    },
+    {
+     "name": "Golden elma",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 51.0
+    },
+    {
+     "name": "Armut",
+     "unit": "kg",
+     "min": 15.0,
+     "max": 60.0
+    },
+    {
+     "name": "Nar",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 50.0
+    },
+    {
+     "name": "Ayva",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 65.0
+    },
+    {
+     "name": "Beyaz üzüm",
+     "unit": "kg",
+     "min": 10.0,
+     "max": 55.0
+    },
+    {
+     "name": "Çekirdeksiz üzüm",
+     "unit": "kg",
+     "min": 14.0,
+     "max": 40.0
+    },
+    {
+     "name": "Karpuz",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 20.0
+    },
+    {
+     "name": "Kavun",
+     "unit": "kg",
+     "min": 3.0,
+     "max": 35.0
+    },
+    {
+     "name": "Greyfurt",
+     "unit": "kg",
+     "min": 5.0,
+     "max": 30.05
+    }
+   ]
+  }
+ ]
+}
