@@ -620,7 +620,7 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-13",
+   "source_date": "2026-11-14",
    "stale": false,
    "stale_since": null,
    "items": [
@@ -688,20 +688,23 @@
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 45.0,
-     "max": 50.0
+     "min": 55.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Dikenli Salatalık",
      "unit": "kg",
-     "min": 50.0,
-     "max": 50.0
+     "min": 55.0,
+     "max": 55.0,
+     "trend": "up"
     },
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 42.0,
-     "max": 42.0
+     "min": 40.0,
+     "max": 40.0,
+     "trend": "down"
     },
     {
      "name": "Fasulye",
