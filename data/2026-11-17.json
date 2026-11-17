@@ -612,75 +612,22 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-14",
-   "stale": true,
-   "stale_since": "2026-11-14",
+   "source_date": "2026-11-17",
+   "stale": false,
+   "stale_since": null,
    "items": [
-    {
-     "name": "Salatalık(diğer)",
-     "unit": "kg",
-     "min": 6.0,
-     "max": 62.0
-    },
-    {
-     "name": "Silor",
-     "unit": "kg",
-     "min": 15.0,
-     "max": 57.8
-    },
-    {
-     "name": "Çengelköy",
-     "unit": "kg",
-     "min": 50.0,
-     "max": 50.0
-    },
-    {
-     "name": "Çalı Fasulye",
-     "unit": "kg",
-     "min": 20.0,
-     "max": 80.0
-    },
-    {
-     "name": "Fasulye(diğer Taze)",
-     "unit": "kg",
-     "min": 45.0,
-     "max": 90.0
-    },
-    {
-     "name": "Ayşe Kadın Fasulye",
-     "unit": "kg",
-     "min": 89.1,
-     "max": 89.1
-    },
-    {
-     "name": "Patlıcan(diğer)",
-     "unit": "kg",
-     "min": 16.0,
-     "max": 88.3
-    },
-    {
-     "name": "Yerli Muz (konvansiyonel)",
-     "unit": "kg",
-     "min": 55.0,
-     "max": 70.0
-    },
-    {
-     "name": "Yerli Muz (iyi Tarım)",
-     "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
-    },
-    {
-     "name": "Avokado",
-     "unit": "adet",
-     "min": 29.0,
-     "max": 37.45
-    },
     {
      "name": "Salatalık",
      "unit": "kg",
      "min": 55.0,
      "max": 60.0
+    },
+    {
+     "name": "Silor",
+     "unit": "kg",
+     "min": 55.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Dikenli Salatalık",
@@ -703,8 +650,9 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 50.0,
-     "max": 65.0
+     "min": 40.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Topak Patlıcan",
