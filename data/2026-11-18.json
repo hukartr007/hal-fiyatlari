@@ -218,21 +218,23 @@
    "name": "Serik",
    "source": "https://www.batiakdeniztv.com/serik-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-17",
-   "stale": true,
-   "stale_since": "2026-11-16",
+   "source_date": "2026-11-18",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 45.0,
-     "max": 45.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "up"
     },
     {
      "name": "Domates Kokteyl",
      "unit": "kg",
-     "min": 65.0,
-     "max": 65.0
+     "min": 60.0,
+     "max": 60.0,
+     "trend": "down"
     },
     {
      "name": "Sivri Biber",
@@ -249,20 +251,23 @@
     {
      "name": "Dolma Biber",
      "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "down"
     },
     {
      "name": "Çarli Biber",
      "unit": "kg",
-     "min": 35.0,
-     "max": 35.0
+     "min": 30.0,
+     "max": 30.0,
+     "trend": "down"
     },
     {
      "name": "Üç Burun Köy Biberi",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Kabak",
@@ -273,8 +278,9 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "down"
     },
     {
      "name": "Salata",
@@ -637,7 +643,7 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-17",
+   "source_date": "2026-11-18",
    "stale": false,
    "stale_since": null,
    "items": [
@@ -674,14 +680,15 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 40.0,
-     "max": 50.0
+     "min": 30.0,
+     "max": 40.0,
+     "trend": "down"
     },
     {
      "name": "Topak Patlıcan",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0,
+     "min": 50.0,
+     "max": 50.0,
      "trend": "down"
     },
     {
@@ -711,14 +718,16 @@
     {
      "name": "Dolmalık Biber",
      "unit": "kg",
-     "min": 45.0,
-     "max": 45.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "down"
     },
     {
      "name": "Köy Biberi",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Sivri Biber",
@@ -729,8 +738,9 @@
     {
      "name": "Çarliston Biber",
      "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
+     "min": 30.0,
+     "max": 30.0,
+     "trend": "down"
     },
     {
      "name": "Kıl Sivri Biber",
