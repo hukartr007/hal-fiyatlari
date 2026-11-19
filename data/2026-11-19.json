@@ -612,9 +612,9 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-18",
-   "stale": true,
-   "stale_since": "2026-11-18",
+   "source_date": "2026-11-19",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Salatalık",
@@ -631,8 +631,9 @@
     {
      "name": "Dikenli Salatalık",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Domates",
@@ -697,8 +698,9 @@
     {
      "name": "Sivri Biber",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Çarliston Biber",
@@ -709,8 +711,9 @@
     {
      "name": "Kıl Sivri Biber",
      "unit": "kg",
-     "min": 85.0,
-     "max": 85.0
+     "min": 80.0,
+     "max": 80.0,
+     "trend": "down"
     }
    ]
   },
