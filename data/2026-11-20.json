@@ -6,7 +6,7 @@
    "name": "Antalya",
    "source": "https://www.batiakdeniztv.com/antalya-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-19",
+   "source_date": "2026-11-20",
    "stale": true,
    "stale_since": "2026-11-18",
    "items": [
@@ -202,7 +202,7 @@
    "name": "Serik",
    "source": "https://www.batiakdeniztv.com/serik-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-19",
+   "source_date": "2026-11-20",
    "stale": true,
    "stale_since": "2026-11-18",
    "items": [
@@ -612,15 +612,16 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-19",
-   "stale": true,
-   "stale_since": "2026-11-19",
+   "source_date": "2026-11-20",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 55.0,
-     "max": 60.0
+     "min": 47.0,
+     "max": 52.0,
+     "trend": "down"
     },
     {
      "name": "Silor",
@@ -631,8 +632,9 @@
     {
      "name": "Dikenli Salatalık",
      "unit": "kg",
-     "min": 50.0,
-     "max": 50.0
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "down"
     },
     {
      "name": "Domates",
@@ -719,9 +721,9 @@
    "name": "Alanya",
    "source": "https://www.batiakdeniztv.com/alanya-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-19",
-   "stale": true,
-   "stale_since": "2026-11-19",
+   "source_date": "2026-11-20",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
@@ -732,8 +734,9 @@
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 57.0,
-     "max": 60.0
+     "min": 30.0,
+     "max": 52.0,
+     "trend": "down"
     },
     {
      "name": "Patlıcan",
