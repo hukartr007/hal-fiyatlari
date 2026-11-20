@@ -667,18 +667,6 @@
      "max": 40.0
     },
     {
-     "name": "Muz Yerli",
-     "unit": "kg",
-     "min": 50.0,
-     "max": 50.0
-    },
-    {
-     "name": "Muz Grand",
-     "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
-    },
-    {
      "name": "Kapya Biber",
      "unit": "kg",
      "min": 70.0,
