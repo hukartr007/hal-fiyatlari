@@ -288,9 +288,9 @@
    "name": "Demre",
    "source": "https://www.batiakdeniztv.com/demre-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-19",
-   "stale": true,
-   "stale_since": "2026-11-18",
+   "source_date": "2026-11-21",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Çarli Biber",
@@ -361,8 +361,9 @@
     {
      "name": "Macar Dolma",
      "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
+     "min": 32.0,
+     "max": 32.0,
+     "trend": "down"
     },
     {
      "name": "Kampari",
@@ -383,16 +384,24 @@
      "max": 80.0
     },
     {
+     "name": "Salkito Kokteyl D",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0
+    },
+    {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Silor Salatalık",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Patlıcan",
@@ -520,9 +529,9 @@
    "name": "Finike",
    "source": "https://www.batiakdeniztv.com/finike-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-14",
-   "stale": true,
-   "stale_since": "2026-11-14",
+   "source_date": "2026-11-21",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
@@ -533,56 +542,82 @@
     {
      "name": "Yuvarlak Domates",
      "unit": "kg",
-     "min": 70.0,
-     "max": 80.0
+     "min": 60.0,
+     "max": 70.0,
+     "trend": "down"
     },
     {
      "name": "Oval Domates",
      "unit": "kg",
-     "min": 70.0,
-     "max": 80.0
+     "min": 60.0,
+     "max": 70.0,
+     "trend": "down"
     },
     {
      "name": "Çarli Biber",
      "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
+     "min": 30.0,
+     "max": 30.0,
+     "trend": "down"
     },
     {
      "name": "Sivri Biber",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "down"
     },
     {
      "name": "Kıl Sivri Biber",
      "unit": "kg",
-     "min": 65.0,
-     "max": 65.0
+     "min": 60.0,
+     "max": 60.0,
+     "trend": "down"
     },
     {
      "name": "Kılçık Sivri Biber",
      "unit": "kg",
-     "min": 85.0,
-     "max": 85.0
+     "min": 80.0,
+     "max": 80.0,
+     "trend": "down"
     },
     {
      "name": "Üçburun Köy Biberi",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "down"
     },
     {
      "name": "Dolma Biber",
      "unit": "kg",
-     "min": 45.0,
-     "max": 45.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "down"
     },
     {
      "name": "Kapya Biber",
      "unit": "kg",
      "min": 80.0,
      "max": 80.0
+    },
+    {
+     "name": "Şili Biber Kırmızı",
+     "unit": "kg",
+     "min": 100.0,
+     "max": 100.0
+    },
+    {
+     "name": "Şili Biber Yeşil",
+     "unit": "kg",
+     "min": 70.0,
+     "max": 70.0
+    },
+    {
+     "name": "Cin Biber",
+     "unit": "kg",
+     "min": 110.0,
+     "max": 110.0
     },
     {
      "name": "Salatalık",
@@ -593,20 +628,29 @@
     {
      "name": "Salatalık (Silor)",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 50.0,
+     "max": 50.0,
+     "trend": "down"
+    },
+    {
+     "name": "Dikenli Salatalık",
+     "unit": "kg",
+     "min": 45.0,
+     "max": 45.0
     },
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 60.0,
-     "max": 70.0
+     "min": 30.0,
+     "max": 40.0,
+     "trend": "down"
     },
     {
      "name": "Patlıcan Oval",
      "unit": "kg",
-     "min": 80.0,
-     "max": 80.0
+     "min": 55.0,
+     "max": 55.0,
+     "trend": "down"
     },
     {
      "name": "Kabak",
@@ -621,21 +665,23 @@
    "name": "Gazipaşa",
    "source": "https://www.batiakdeniztv.com/gazipasa-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com (resmi bülten değil)",
-   "source_date": "2026-11-20",
-   "stale": true,
-   "stale_since": "2026-11-20",
+   "source_date": "2026-11-21",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 47.0,
-     "max": 52.0
+     "min": 45.0,
+     "max": 50.0,
+     "trend": "down"
     },
     {
      "name": "Silor",
      "unit": "kg",
-     "min": 55.0,
-     "max": 60.0
+     "min": 50.0,
+     "max": 55.0,
+     "trend": "down"
     },
     {
      "name": "Dikenli Salatalık",
@@ -646,8 +692,9 @@
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
+     "min": 35.0,
+     "max": 35.0,
+     "trend": "down"
     },
     {
      "name": "Fasulye",
@@ -753,27 +800,30 @@
    "name": "Muğla (Fethiye)",
    "source": "https://www.batiakdeniztv.com/mugla-fethiye-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com, Fethiye Karaçulha Toptancı Hali",
-   "source_date": "2026-11-14",
-   "stale": true,
-   "stale_since": "2026-11-13",
+   "source_date": "2026-11-20",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 40.0,
-     "max": 55.0
+     "min": 50.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Domates Diğer",
      "unit": "kg",
-     "min": 25.0,
-     "max": 25.0
+     "min": 30.0,
+     "max": 30.0,
+     "trend": "up"
     },
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 50.0,
-     "max": 50.0
+     "min": 60.0,
+     "max": 60.0,
+     "trend": "up"
     },
     {
      "name": "Kabak",
@@ -784,26 +834,30 @@
     {
      "name": "Patlıcan",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 30.0,
+     "max": 40.0,
+     "trend": "down"
     },
     {
      "name": "Fasulye",
      "unit": "kg",
-     "min": 70.0,
-     "max": 70.0
+     "min": 60.0,
+     "max": 60.0,
+     "trend": "down"
     },
     {
      "name": "Biber Sivri",
      "unit": "kg",
-     "min": 55.0,
-     "max": 55.0
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "down"
     },
     {
      "name": "Biber Çarliston",
      "unit": "kg",
-     "min": 40.0,
-     "max": 40.0
+     "min": 30.0,
+     "max": 30.0,
+     "trend": "down"
     },
     {
      "name": "Havuç",
