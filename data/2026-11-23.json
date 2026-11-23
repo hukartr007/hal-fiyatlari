@@ -792,15 +792,16 @@
    "name": "Muğla (Fethiye)",
    "source": "https://www.batiakdeniztv.com/mugla-fethiye-hal-fiyatlari",
    "note": "Kaynak: batiakdeniztv.com, Fethiye Karaçulha Toptancı Hali",
-   "source_date": "2026-11-20",
-   "stale": true,
-   "stale_since": "2026-11-21",
+   "source_date": "2026-11-23",
+   "stale": false,
+   "stale_since": null,
    "items": [
     {
      "name": "Domates",
      "unit": "kg",
-     "min": 50.0,
-     "max": 60.0
+     "min": 40.0,
+     "max": 55.0,
+     "trend": "down"
     },
     {
      "name": "Domates Diğer",
@@ -811,8 +812,9 @@
     {
      "name": "Salatalık",
      "unit": "kg",
-     "min": 60.0,
-     "max": 60.0
+     "min": 45.0,
+     "max": 45.0,
+     "trend": "down"
     },
     {
      "name": "Kabak",
